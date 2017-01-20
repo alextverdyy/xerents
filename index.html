@@ -1,0 +1,59 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+
+            function comprobarDisponibilidad(){
+                    if(window.XMLHttpRequest) {
+                        peticion_http = new XMLHttpRequest();
+                    }
+                    else if(window.ActiveXObject) {
+                        peticion_http = new ActiveXObject("Microsoft.XMLHTTP");
+                    }
+                    var localizacion = document.getElementById("localizacion").value;
+
+                    peticion_http.onreadystatechange = validaLogin;
+                    peticion_http.open('POST', 'eventos.php', true);
+                    peticion_http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                    peticion_http.send("localizacion="+localizacion+"&pagina=1&nocache="+Math.random());
+
+                    function validaLogin(){
+                        if(peticion_http.readyState == 4) {
+                            if(peticion_http.status == 200) {
+                            var respuesta_json = peticion_http.responseText;
+                            var objeto_json = eval("("+respuesta_json+")");
+
+                            if(objeto_json.total_items> 1){
+                                document.getElementById("eventos").innerHTML = "";
+                            for(var x = 0; x < 10; x++){
+                                if(objeto_json.events.event[x].image.url != undefined || objeto_json.events.event[x].image.url != null){
+                           document.getElementById("eventos").innerHTML = document.getElementById("eventos").innerHTML + "\n"+objeto_json.events.event[x].title;
+                           var pre = document.getElementById("eventos");
+                           var img = document.createElement("img");
+                           img.setAttribute("src",objeto_json.events.event[x].image.medium.url);
+                           img.setAttribute("width","128px");
+                           pre.appendChild(img);
+                           }else{
+                               document.getElementById("eventos").innerHTML = document.getElementById("eventos").innerHTML + "\n"+objeto_json.events.event[x].title;
+
+                           }
+                            }
+                           }else{
+                               alert("corto");
+                               document.getElementById("eventos").innerHTML = objeto_json.events.event.title;
+                           }
+                            }
+                    }
+
+                    }
+            }
+
+        </script>
+</head>
+<body>
+ <input type="text" id="localizacion" >
+ <input type="submit" value="dale" onclick="comprobarDisponibilidad()">
+ <pre id="eventos"></pre>
+</body>
+</html>
