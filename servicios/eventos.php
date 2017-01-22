@@ -1,7 +1,7 @@
 
 <?php
 
-if ($_REQUEST['localizacion']) {
+if ($_REQUEST['coordenadas']) {
     require 'Eventful.php';
 
     // Enter your application key here. (See http://api.eventful.com/keys/)
