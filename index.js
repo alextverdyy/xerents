@@ -11,11 +11,11 @@ function comprobarDisponibilidad(){
 					
 					
                     
-                    peticion_http.onreadystatechange = validaLogin;
-                    peticion_http.open('post', 'https://api.eventful.com/json/events/search', true);
+                    peticion_http.onreadystatechange = sacarEventos;
+                    peticion_http.open('post', 'servicios/eventos.php');
                     peticion_http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-                    peticion_http.send("app_key=rCR5P3ZZGndrHvpR&where="+coordenadas+"&page_size=100&within=25");
-                    function validaLogin(){
+                    peticion_http.send("coordenadas="+coordenadas+"&pagina=1&nocache="+Math.random());
+                    function sacarEventos(){
                         if(peticion_http.readyState == 4) {
                             if(peticion_http.status == 200) {
                             var respuesta_json = peticion_http.responseText;
@@ -46,6 +46,7 @@ function comprobarDisponibilidad(){
             }
 
 			window.onload = function(){
+
 				if (!navigator.geolocation){
 					alert("La geolocalizacion no esta soportada en tu navegador");
 					return;
@@ -64,6 +65,6 @@ function comprobarDisponibilidad(){
 				  };
 					navigator.geolocation.getCurrentPosition(success, error);
 				}
-			
+
 
 
