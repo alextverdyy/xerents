@@ -1,0 +1,32 @@
+#contenedor
+{
+    background-color: lightgoldenrodyellow;
+}
+
+#cabecera
+{
+    width:100%;
+    border: 1px solid red;
+    height:20%;
+}
+
+#portada
+{
+    width:100%;
+    border: 1px solid blue;
+    height:45%;
+}
+
+#destacados
+{
+    width:100%;
+    border: 1px solid darkgreen;
+    height:80%;
+}
+
+#pie
+{
+    width:100%;
+    border: 1px solid deeppink;
+    height:20%;
+}
