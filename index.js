@@ -1,6 +1,6 @@
 
 var coordenadas;
-function comprobarDisponibilidad(){
+function mostrarEventos(){
     if(window.XMLHttpRequest) {
         peticion_http = new XMLHttpRequest();
     }
@@ -57,3 +57,6 @@ window.onload = function(){
 
 
 
+window.onload() = function () {
+    mostrarEventos();
+}
