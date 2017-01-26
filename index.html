@@ -7,6 +7,8 @@
     <link rel="STYLESHEET" type="text/css" href="style.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
     <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="index.js"></script>
     <script src="bootstrap/js/bootstrap.js" ></script>
     <title>Inicio | Xerents</title>
 </head>
@@ -18,7 +20,10 @@
     <div id="cabecera">
         <h1 id="titulo">Xerets [PROVISIONAL]</h1>
         <div id="menu">
-
+            <a href="#"><div id="e1" class="itemMenu">Inicio</div></a>
+            <a href="#"><div class="itemMenu" id="e2">Página 1</div></a>
+            <a href="#"><div class="itemMenu" id="e3">Página 2</div></a>
+            <a href="#"><div class="itemMenu" id="e4">Página 3</div></a>
         </div>
 
     </div>
@@ -26,6 +31,7 @@
 
     <!--Portada con imagen de transparencia y texto-->
     <div id="portada">
+        <img id="imagenPortada" src="img/portafa.jpg" />
     </div>
     <!--FIN Portada con imagen de transparencia y texto FIN-->
 
@@ -34,7 +40,7 @@
         <div class = "row centrar-texto" >
             <div class="col-xs-18 col-sm-7 col-md-4">
                 <div class="thumbnail">
-                    <img src="http://placehold.it/300?text=Evento" alt="">
+                    <img src="http://placehold.it/300?text=Evento" alt="" class="imgdestacadas">
                     <div class="caption">
                         <h4>Titulo evento</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
@@ -43,7 +49,7 @@
             </div>
             <div class="col-xs-18 col-sm-7 col-md-4">
                 <div class="thumbnail">
-                    <img src="http://placehold.it/300?text=Evento" alt="">
+                    <img src="http://placehold.it/300?text=Evento" alt="" class="imgdestacadas">
                     <div class="caption">
                         <h4>Titulo evento</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
@@ -52,7 +58,7 @@
             </div>
             <div class="col-xs-18 col-sm-7 col-md-4">
                 <div class="thumbnail">
-                    <img src="http://placehold.it/300?text=Evento" alt="">
+                    <img src="http://placehold.it/300?text=Evento" alt="" class="imgdestacadas">
                     <div class="caption">
                         <h4>Titulo evento</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
@@ -63,7 +69,7 @@
         <div class = "row centrar-texto" >
             <div class="col-xs-18 col-sm-7 col-md-4">
                 <div class="thumbnail">
-                    <img src="http://placehold.it/300?text=Evento" alt="">
+                    <img src="http://placehold.it/300?text=Evento" alt="" class="imgdestacadas">
                     <div class="caption">
                         <h4>Titulo evento</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
@@ -72,7 +78,7 @@
             </div>
             <div class="col-xs-18 col-sm-7 col-md-4">
                 <div class="thumbnail">
-                    <img src="http://placehold.it/300?text=Evento" alt="">
+                    <img src="http://placehold.it/300?text=Evento" alt="" class="imgdestacadas">
                     <div class="caption">
                         <h4>Titulo evento</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
@@ -81,7 +87,7 @@
             </div>
             <div class="col-xs-18 col-sm-7 col-md-4">
                 <div class="thumbnail">
-                    <img src="http://placehold.it/300?text=Evento" alt="">
+                    <img src="http://placehold.it/300?text=Evento" alt="" class="imgdestacadas">
                     <div class="caption">
                         <h4>Titulo evento</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
@@ -95,6 +101,7 @@
 
     <!--Pie de página-->
     <div id="pie">
+        <div id="participantes"></div>
     </div>
     <!--FIN Pie de página FIN-->
 

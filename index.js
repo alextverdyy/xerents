@@ -19,7 +19,7 @@ function mostrarEventos(){
                 //console.log(respuesta_json);
                 var objeto_json = eval("("+respuesta_json+")");
 
-                var imagenes = document.getElementsByTagName("img");
+                var imagenes = document.getElementsByClassName("imgdestacadas");
                 var titulos = document.getElementsByTagName("h4");
                 var destacados = document.getElementById("destacados");
                 var desc = destacados.getElementsByTagName("p");
@@ -28,8 +28,9 @@ function mostrarEventos(){
                 for(var x = 0; x < objeto_json.total_items; x++){
 
                     var jsonN = JSON.stringify(objeto_json.events.event[x].image);
-
-                    if(jsonN != "{}"){
+                    var jsonD = JSON.stringify(objeto_json.events.event[x].description);
+                    //console.log(jsonD);
+                    if(jsonN !== "{}" && jsonD !== "{}"){
                         //var titulo = document.createElement("h1");
                         //titulo.innerHTML = objeto_json.events.event[x].title;
 
