@@ -1,32 +1,85 @@
+/*Estilo General*/
 #contenedor
 {
     background-color: lightgoldenrodyellow;
 }
+/*FIN Estilo General FIN*/
 
+/*Estilo Cabecera*/
 #cabecera
 {
     width:100%;
     border: 1px solid red;
-    height:20%;
+    height:19%;
 }
 
+#titulo
+{
+    text-align: center;
+}
+#menu
+{
+    width:100%;
+    background-color:#f5e79e;
+    float: left;
+}
+.itemMenu
+{
+    float: left;
+    padding: 1%;
+    color:darkcyan;
+    transition: all 0.5s ease;
+    background-color: transparent;
+}
+
+.itemMenu:hover
+{
+    float: left;
+    margin: 1.2%;
+    color:orangered;
+    background-color: antiquewhite;
+}
+/*FIN Estilo Cabecera FIN*/
+
+/*Estilo Portada*/
 #portada
 {
     width:100%;
     border: 1px solid blue;
-    height:45%;
 }
 
+#imagenPortada
+{
+    width:100%;
+    opacity: 0.5;
+}
+/*FIN Estilo Portada FIN*/
+
+/*Estilo Destacados*/
 #destacados
 {
     width:100%;
     border: 1px solid darkgreen;
-    height:80%;
+
+}
+#destacados p
+{
+    margin: 0 0 10px;
+    display: block;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 10em;
+    line-height: 1.8em;
 }
 
+/*FIN Estilo Destacados FIN*/
+
+/*Estilo Pie*/
 #pie
 {
     width:100%;
     border: 1px solid deeppink;
     height:20%;
 }
+/*FIN Estilo Pie FIN*/

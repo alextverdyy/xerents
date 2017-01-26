@@ -16,17 +16,32 @@ function mostrarEventos(){
         if(peticion_http.readyState == 4) {
             if(peticion_http.status == 200) {
                 var respuesta_json = peticion_http.responseText;
+                //console.log(respuesta_json);
                 var objeto_json = eval("("+respuesta_json+")");
+
+                var imagenes = document.getElementsByTagName("img");
+                var titulos = document.getElementsByTagName("h4");
+                var destacados = document.getElementById("destacados");
+                var desc = destacados.getElementsByTagName("p");
+                console.log(objeto_json);
+                var cont = 0;
                 for(var x = 0; x < objeto_json.total_items; x++){
-                    if(objeto_json.events.event[x].image.medium !== undefined){
-                        var titulo = document.createElement("h1");
-                        titulo.innerHTML = objeto_json.events.event[x].title;
-                        var imagen = document.createElement("img");
-                        imagen.setAttribute("src",objeto_json.events.event[x].image.medium.url);
-                        imagen.setAttribute("width","100px");
-                        var imagenes = document.getElementById("imagenes");
-                        imagenes.appendChild(titulo);
-                        imagenes.appendChild(imagen);
+
+                    var jsonN = JSON.stringify(objeto_json.events.event[x].image);
+
+                    if(jsonN != "{}"){
+                        //var titulo = document.createElement("h1");
+                        //titulo.innerHTML = objeto_json.events.event[x].title;
+
+                        imagenes[cont].setAttribute("src", objeto_json.events.event[x].image.medium.url);
+                        imagenes[cont].setAttribute("width", "200px");
+                        titulos[cont].innerHTML = objeto_json.events.event[x].title;
+                        desc[cont].innerHTML = objeto_json.events.event[x].description;
+                        // console.log(imagenes[i]);
+                        cont++;
+                        //var imagenes = document.getElementById("imagenes");
+                        //imagenes.appendChild(titulo);
+                        //imagenes.appendChild(imagen);
                     }
                 }
             }
@@ -45,18 +60,16 @@ window.onload = function(){
         var latitud  = position.coords.latitude;
         var longitud = position.coords.longitude;
         coordenadas = latitud + "," + longitud;
-        //console.log(coordenadas);
-
+        console.log(coordenadas);
+        mostrarEventos();
     };
 
     function error() {
         alert("No se puede coger tu posicion");
     };
     navigator.geolocation.getCurrentPosition(success, error);
+
 }
 
 
 
-window.onload() = function () {
-    mostrarEventos();
-}
