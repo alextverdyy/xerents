@@ -1,8 +1,11 @@
+/*Estilo General*/
 #contenedor
 {
     background-color: lightgoldenrodyellow;
 }
+/*FIN Estilo General FIN*/
 
+/*Estilo Cabecera*/
 #cabecera
 {
     width:100%;
@@ -10,23 +13,39 @@
     height:20%;
 }
 
+#titulo
+{
+    text-align: center;
+}
+#menu
+{
+
+}
+/*FIN Estilo Cabecera FIN*/
+
+/*Estilo Portada*/
 #portada
 {
     width:100%;
     border: 1px solid blue;
     height:45%;
 }
+/*FIN Estilo Portada FIN*/
 
+/*Estilo Destacados*/
 #destacados
 {
     width:100%;
     border: 1px solid darkgreen;
 
 }
+/*FIN Estilo Destacados FIN*/
 
+/*Estilo Pie*/
 #pie
 {
     width:100%;
     border: 1px solid deeppink;
     height:20%;
 }
+/*FIN Estilo Pie FIN*/
