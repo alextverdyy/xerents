@@ -20,7 +20,7 @@ $claveValido = $clave1->fetch_row();
 
 
 //COMPRUEBA LA CONTRASEÑA Y APARTE TAMBIEN SI ESTA BLOQUEADO O NO;
-if(password_verify()){
+if(password_verify()){ 
 
     $usuarioBloqueado = ($conn->query());
     $usuarioValido = $usuarioBloqueado->fetch_row();
