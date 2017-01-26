@@ -50,7 +50,7 @@ function mostrarEventos(){
     }
 }
 
-window.onload = function(){
+window.onload = function() {
 
     if (!navigator.geolocation){
         alert("La geolocalizacion no esta soportada en tu navegador");
