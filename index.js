@@ -17,16 +17,18 @@ function mostrarEventos(){
             if(peticion_http.status == 200) {
                 var respuesta_json = peticion_http.responseText;
                 var objeto_json = eval("("+respuesta_json+")");
+                var imagenes = document.getElementsByTagName("img");
                 for(var x = 0; x < objeto_json.total_items; x++){
                     if(objeto_json.events.event[x].image.medium !== undefined){
-                        var titulo = document.createElement("h1");
-                        titulo.innerHTML = objeto_json.events.event[x].title;
-                        var imagen = document.createElement("img");
-                        imagen.setAttribute("src",objeto_json.events.event[x].image.medium.url);
-                        imagen.setAttribute("width","100px");
-                        var imagenes = document.getElementById("imagenes");
-                        imagenes.appendChild(titulo);
-                        imagenes.appendChild(imagen);
+                        //var titulo = document.createElement("h1");
+                        //titulo.innerHTML = objeto_json.events.event[x].title;
+                        for(var i = 0; i < imagenes.length; i++) {
+                            imagenes[i].setAttribute("src", objeto_json.events.event[x].image.medium.url);
+                            imagenes[i].setAttribute("width", "200px");
+                        }
+                        //var imagenes = document.getElementById("imagenes");
+                        //imagenes.appendChild(titulo);
+                        //imagenes.appendChild(imagen);
                     }
                 }
             }
