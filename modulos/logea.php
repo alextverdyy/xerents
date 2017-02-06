@@ -1,37 +1,21 @@
 <?php
 
-$servername = "";
-$username = "";
-$password = "";
-$dbname = "";
+include_once 'config.php';
 
+$usuario = $_REQUEST["usuario"];
+$pass = $_REQUEST["pass"];
 
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-$usuario = ["usuario"];
-$pass = ["pass"];
-
-$clave = ($conn->query());
-$claveValido = $clave1->fetch_row();
+$clave = ($conn->query("SELECT pass FROM usuarios WHERE usuario = '$usuario'"));
+$claveValido = $clave->fetch_row();
 
 
 //COMPRUEBA LA CONTRASEÑA Y APARTE TAMBIEN SI ESTA BLOQUEADO O NO;
-if(password_verify()){ 
-
-    $usuarioBloqueado = ($conn->query());
-    $usuarioValido = $usuarioBloqueado->fetch_row();
-
-    if($usuarioValido[0] == 1){
-
-    }else{
-
-    }
+if(password_verify($clave, $claveValido[0])){
+    echo "Se ha logeado correctamente";
+    echo "<a href=''></a>";
 }else{
-
+    echo "El usuario o contraseña son incorrectos, intentelo de nuevo";
+    echo "<a href='login.php'></a>";
 }
 
 ?>
