@@ -3,6 +3,16 @@
 {
     background-color: lightgoldenrodyellow;
 }
+
+.mdl-layout__container
+{
+    position:relative !important;
+}
+
+.mdl-mini-footer
+{
+    height:100%;
+}
 /*FIN Estilo General FIN*/
 
 /*Estilo Cabecera*/
@@ -10,7 +20,7 @@
 {
     width:100%;
     border: 1px solid red;
-    height:19%;
+    height: 100%;
 }
 
 #titulo
@@ -60,7 +70,7 @@
 {
     width:100%;
     border: 1px solid darkgreen;
-
+    padding-top: 13%;
 }
 #destacados p
 {
@@ -80,6 +90,6 @@
 {
     width:100%;
     border: 1px solid deeppink;
-    height:20%;
+    height:15%;
 }
 /*FIN Estilo Pie FIN*/
