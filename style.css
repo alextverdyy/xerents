@@ -1,7 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,400,800');
+
 /*Estilo General*/
+
+    small {
+    background: #101010;
+    color: #FFFFFF;
+    display: inline-block;
+    font: 800 11px/24px "Open Sans";
+    letter-spacing: 0.4px;
+    padding: 0 8px;
+    text-transform: uppercase;
+}
+
+.shadow-separator {
+    height: 20px;
+    margin: 40px auto;
+    overflow: hidden;
+    width: 400px;
+}
+.shadow-separator:after {
+    border-radius: 100%;
+    box-shadow: 0 0 10px #333333;
+    content: "";
+    display: block;
+    height: inherit;
+    position: relative;
+    top: 100%;
+}
+
+.separador
+{
+    background-color:lightgray;
+    width:90%;
+    margin:0 auto;
+    margin-top:3%;
+    margin-bottom:2%
+}
+
 #contenedor
 {
-    background-color: lightgoldenrodyellow;
+    background-color: #F0F0F0  ;
+}
+
+.thumbnail
+{
+    background-color: #E0E0E0  !important;
+    border-color: transparent !important;
+    border-radius: 15px !important;
 }
 
 .mdl-layout__container
@@ -16,10 +61,27 @@
 /*FIN Estilo General FIN*/
 
 /*Estilo Cabecera*/
+
+#titEventos
+{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    color: #b92c28;
+}
+
+#logo
+{
+    margin-top:0.5%;
+}
+
+#logo img
+{
+    width:50%;
+}
+
 #cabecera
 {
     width:100%;
-    border: 1px solid red;
     height: 100%;
 }
 
@@ -35,19 +97,13 @@
 }
 .itemMenu
 {
-    float: left;
-    padding: 1%;
-    color:darkcyan;
     transition: all 0.5s ease;
-    background-color: transparent;
 }
 
 .itemMenu:hover
 {
-    float: left;
-    margin: 1.2%;
-    color:orangered;
-    background-color: antiquewhite;
+    color:#b92c28 !important;
+    font-weight: bold !important;
 }
 /*FIN Estilo Cabecera FIN*/
 
@@ -55,7 +111,6 @@
 #portada
 {
     width:100%;
-    border: 1px solid blue;
 }
 
 #imagenPortada
@@ -69,8 +124,6 @@
 #destacados
 {
     width:100%;
-    border: 1px solid darkgreen;
-    padding-top: 13%;
 }
 #destacados p
 {
@@ -83,13 +136,30 @@
     line-height: 1.8em;
 }
 
+.tituloEvento
+{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    border-bottom: 1px double #C0C0C0  ;
+    width:70%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 5%;
+}
+
+.separadorPeq
+{
+    width:20%;
+    margin:0 auto;
+    backkground-color:#F0F0F0;
+}
+
 /*FIN Estilo Destacados FIN*/
 
 /*Estilo Pie*/
 #pie
 {
     width:100%;
-    border: 1px solid deeppink;
     height:15%;
 }
 /*FIN Estilo Pie FIN*/
