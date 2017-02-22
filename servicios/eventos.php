@@ -17,9 +17,9 @@ if ($_REQUEST['coordenadas']) {
     // All method calls other than login() go through call().
     $args = array(
         'where' => $_REQUEST['coordenadas'],
-        'within' => "25",
-        'page_size' => "100",
-        'page_number' => $_REQUEST['pagina'],
+        'within' => "25", // Radio de escaneo de eventos
+        'page_size' => "100", // Numero de registros que devuelve la api
+        'page_number' => $_REQUEST['pagina'], // Pagina 
 
     );
     $event = $ev->call('events/search', $args);
@@ -31,7 +31,7 @@ if ($_REQUEST['coordenadas']) {
     }
 
 
-    echo json_encode($event, JSON_PRETTY_PRINT);
+    echo json_encode($event, JSON_PRETTY_PRINT); //  IMPRIMIR EN FORMA DE JSON 'BONITO' LA RESPUESTA
 
 
 }
