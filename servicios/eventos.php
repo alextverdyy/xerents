@@ -18,7 +18,7 @@ if ($_REQUEST['coordenadas']) {
     $args = array(
         'where' => $_REQUEST['coordenadas'],
         'within' => "25",
-        'page_size' => "10",
+        'page_size' => "100",
         'page_number' => $_REQUEST['pagina'],
 
     );
