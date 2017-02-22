@@ -16,7 +16,7 @@ $passHash = password_hash($clave, PASSWORD_DEFAULT);
 $sql = "INSERT INTO  (usuarios,pass,email) values ('$usuario','$passHash','$email')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
+    echo "Nuevo campo creado correctamente";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
