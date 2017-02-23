@@ -7,29 +7,29 @@
     <style>
         body
         {
-            font-family: 'Comic Sans MS';
-            background: lightblue;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 100;
+            background-color: lightgray  !important;
         }
         h1
         {
             color: darkblue;
+            text-align: center;
         }
         h4
         {
             color: blue;
             background-color: cornflowerblue;
-            height: 50px;
-            width: 400px;
-            position: relative;
+            width: 92%;
             margin: 0 auto;
+            padding:4%;
         }
         .registro
         {
-            position: relative;
-            height: 535px;
-            width: 400px;
+            background-color: #F5F5F5  !important;
+            width: 30%;
             margin: 0 auto;
-            background: white;
+            background: #F5F5F5 !important;
         }
         .mdl
         {
@@ -46,36 +46,30 @@
     </style>
   </head>
   <body>
-    <form align="center">
+
         <h1>Xerents</h1>
-    </form>
-    <form action="#" align="center" class="registro">
+
+    <form action="registrar.php" align="center"class="registro">
         <h4>Nuevo Usuario</h4>
-        <div  class="mdl-textfield mdl-js-textfield" align="left">
-            <label class="mdl">Usuario: </label>
+        <div  cass="mdl-textfield mdl-js-textfeld" align="left">
         </div>
         <br>
         <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="usuario">
-            <label class="mdl-textfield__label" for="sample1">Usuario</label>
+            <label class="mdl-textfield__label" for="usuario">Usuario</label>
+            <input class="mdl-textfield__input" name="usuario" type="text" id="usuario">
         </div>
         <br>
-        <div  class="mdl-textfield mdl-js-textfield" align="left">
-            <label class="mdl">Contraseña: </label>
+                <br>
+        <div class="mdl-textfield mdl-js-textfield">
+            <label class="mdl-textfield__label" for="pass">Contraseña</label>
+            <input class="mdl-textfield__input" name="pass" type="text" id="pass">
+
         </div>
+        <br>
         <br>
         <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="pass">
-            <label class="mdl-textfield__label" for="sample2">Contraseña</label>
-        </div>
-        <br>
-        <div  class="mdl-textfield mdl-js-textfield" align="left">
-            <label class="mdl">Email: </label>
-        </div>
-        <br>
-        <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="email">
-            <label class="mdl-textfield__label" for="sample2">Email</label>
+            <input class="mdl-textfield__input" name="email" type="text" id="email">
+            <label class="mdl-textfield__label" for="email">Email</label>
         </div>
         <br>
         <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Crear Nueva Cuenta</button>
